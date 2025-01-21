@@ -21,7 +21,7 @@ def test_divide_by_zero():
         
 
 def test_factorial():
-    assert factorial(5) == 100
+    assert factorial(5) == 120
     assert factorial(0) == 1
 
 def test_factorial_negative():
