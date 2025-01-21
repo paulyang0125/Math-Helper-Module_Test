@@ -13,3 +13,10 @@ def test_multiply():
 
 def test_divide():
     assert divide(6, 2) == 3
+
+
+def test_divide_by_zero():
+    with pytest.raises(ValueError):
+        divide(3,0)
+        
+
