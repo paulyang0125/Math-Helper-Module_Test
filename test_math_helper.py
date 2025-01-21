@@ -1,5 +1,5 @@
 import pytest
-from math_helper import add,subtract,multiply,divide
+from math_helper import add,subtract,multiply,divide, factorial
 
 
 def test_add():
@@ -20,3 +20,10 @@ def test_divide_by_zero():
         divide(3,0)
         
 
+def test_factorial():
+    assert factorial(5) == 120
+    assert factorial(0) == 1
+
+def test_factorial_negative():
+    with pytest.raises(ValueError):
+        factorial(-1)
