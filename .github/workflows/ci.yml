@@ -59,3 +59,8 @@ jobs:
     - name: Deploy to S3
       run: |
         aws s3 sync . s3://${{ secrets.S3_BUCKET_NAME }} --exclude ".git/*" --exclude ".github/*"
+
+    - name: 顯示部署網址
+      run: |
+        echo "🚀 部署完成！請點擊以下網址查看你的網站："
+        echo "🔗 http://${{ secrets.S3_BUCKET_NAME }}.s3-website-${{ secrets.AWS_REGION }}.amazonaws.com"
